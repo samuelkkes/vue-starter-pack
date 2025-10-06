@@ -1,0 +1,21 @@
+{
+  "dashboard": {
+    "welcome": "Welcome to Your Vue.js App"
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "description": "Login to Your Account",
+      "username": "Username",
+      "password": "Password",
+      "submit": "Login",
+      "forgotPassword": "Forgot Password?",
+      "continueWith": "Or continue with"
+    }
+  },
+  "locale": {
+    "languages": "Languages",
+    "english": "English",
+    "french": "French"
+  }
+}

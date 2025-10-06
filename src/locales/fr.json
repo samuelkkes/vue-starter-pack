@@ -1,0 +1,21 @@
+{
+  "dashboard": {
+    "welcome": "Bienvenue dans votre application Vue.js"
+  },
+  "auth": {
+    "login": {
+      "title": "Connection",
+      "description": "Connectez-vous à votre compte",
+      "username": "Nom d'utilisateur",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "forgotPassword": "Mot de passe oublié?",
+      "continueWith": "Ou continuez avec"
+    }
+  },
+  "locale": {
+    "languages": "Langues",
+    "english": "Anglais",
+    "french": "Français"
+  }
+}
