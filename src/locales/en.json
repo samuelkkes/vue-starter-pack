@@ -17,5 +17,11 @@
     "languages": "Languages",
     "english": "English",
     "french": "French"
+  },
+  "theme": {
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
   }
 }

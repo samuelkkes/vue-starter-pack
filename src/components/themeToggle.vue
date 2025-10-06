@@ -1,15 +1,19 @@
 <script setup lang="ts">
-import { useColorMode } from '@vueuse/core'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { RiMoonLine, RiSunLine } from '@remixicon/vue'
+import { useColorMode } from '@vueuse/core'
+import { useI18n } from 'vue-i18n'
 
-// Pass { disableTransition: false } to enable transitions
+const { t } = useI18n()
 const mode = useColorMode()
 </script>
 
@@ -27,9 +31,19 @@ const mode = useColorMode()
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent align="end">
-      <DropdownMenuItem @click="mode = 'light'"> Light </DropdownMenuItem>
-      <DropdownMenuItem @click="mode = 'dark'"> Dark </DropdownMenuItem>
-      <DropdownMenuItem @click="mode = 'auto'"> System </DropdownMenuItem>
+      <DropdownMenuLabel>{{ t('theme.theme') }}</DropdownMenuLabel>
+      <DropdownMenuSeparator />
+      <DropdownMenuRadioGroup v-model="mode">
+        <DropdownMenuRadioItem value="light">
+          {{ t('theme.light') }}
+        </DropdownMenuRadioItem>
+        <DropdownMenuRadioItem value="dark">
+          {{ t('theme.dark') }}
+        </DropdownMenuRadioItem>
+        <DropdownMenuRadioItem value="auto">
+          {{ t('theme.system') }}
+        </DropdownMenuRadioItem>
+      </DropdownMenuRadioGroup>
     </DropdownMenuContent>
   </DropdownMenu>
 </template>

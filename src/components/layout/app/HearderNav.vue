@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import LanguageSwitcher from '@/components/languageSwitcher.vue'
 import ThemeToggle from '@/components/themeToggle.vue'
 import {
   Breadcrumb,
@@ -9,7 +10,6 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 import { SidebarTrigger } from '@/components/ui/sidebar'
-import LanguageSwitcher from '@/components/languageSwitcher.vue'
 </script>
 <template>
   <header
@@ -21,7 +21,7 @@ import LanguageSwitcher from '@/components/languageSwitcher.vue'
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem class="hidden md:block">
-            <BreadcrumbLink href="#"> Building Your Application </BreadcrumbLink>
+            <BreadcrumbLink href="#"> Home </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator class="hidden md:block" />
           <BreadcrumbItem>
@@ -30,9 +30,9 @@ import LanguageSwitcher from '@/components/languageSwitcher.vue'
         </BreadcrumbList>
       </Breadcrumb>
     </div>
-    <div class="pr-4 ">
-      <ThemeToggle />
+    <div class="pr-4 space-x-1">
       <LanguageSwitcher />
+      <ThemeToggle />
     </div>
   </header>
 </template>
